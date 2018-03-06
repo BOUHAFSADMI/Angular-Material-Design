@@ -1,3 +1,5 @@
+@import "../styles";
+
 .example-header-image {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
@@ -10,3 +12,42 @@
 .example-spacer {
     flex: 1 1 auto;
 }
+
+.filler{
+    position: absolute;
+    right: 0px;
+}
+
+
+.mat-sidenav-container {
+  @include angular-material-theme($alt-theme);
+
+  .mat-toolbar{
+    padding: 0px;
+    .mat-toolbar-row:first-of-type{
+      background: mat-color($custom-primary, 700);
+      display: flex;
+
+      button {
+        color: white;
+        width: 40px;
+        padding: inherit;
+      }
+    }
+
+    .mat-toolbar-row{
+      background: mat-color($custom-primary, 500);
+      button{
+        color: white;
+      }
+    }
+  }
+
+  .container{
+    width: 800px;
+    margin: auto;
+    position: relative;
+    top: -40px;
+  }
+}
+

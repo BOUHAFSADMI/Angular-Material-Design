@@ -1,0 +1,42 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Checkout</mat-card-title>
+    <mat-card-subtitle>Enter your shipping address</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form action="">
+      <h3>Basics</h3>
+      <mat-input-container>
+        <input matInput placeholder="First Name">
+      </mat-input-container>
+
+      <mat-input-container>
+        <input matInput placeholder="Last Name">
+      </mat-input-container>
+
+      <mat-input-container>
+        <input matInput placeholder="Email">
+        <mat-hint align="end">ex: example@email.com</mat-hint>
+      </mat-input-container>
+
+      <mat-input-container>
+        <input matInput placeholder="Phone">
+        <mat-hint align="end">format: #### ###-####</mat-hint>
+      </mat-input-container>
+
+      <h3>Preferences</h3>
+      <mat-select placeholder="Preferred contact method">
+        <mat-option value="Email">Email</mat-option>
+        <mat-option value="Phone">Phone</mat-option>
+      </mat-select>
+
+      <mat-checkbox>Subscribe to our newsletter</mat-checkbox>
+
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button class="mat-primary" (click)="onSubmit()">Submit</button>
+    <button mat-button>Cancel</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,16 @@
+<mat-tab-group>
+  <mat-tab label="DEALS">
+
+    <mat-grid-list [cols]="4">
+      <mat-grid-tile *ngFor = "let carrot of carrots">
+          <div class="carrots-container">
+             <div class="carrot"  [ngStyle]="{'background-image':'url('+carrot.imagePath+')'}"></div>
+          </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+  </mat-tab>
+  <mat-tab label="ABOUT TO SPOIL">Content 2</mat-tab>
+  <mat-tab label="NOT THE BEST...BUT">Content 2</mat-tab>
+  <mat-tab label="DISCOUNTED">Content 2</mat-tab>
+</mat-tab-group>

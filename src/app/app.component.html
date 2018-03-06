@@ -1,6 +1,40 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="side">
-    sidenav
+    
+    <mat-list>
+
+        <mat-list-item>
+          <button mat-button matTooltip="Home" color="accent" routerLink=""><mat-icon>home</mat-icon></button>
+        </mat-list-item>  
+       <mat-list-item>
+          <button mat-button matTooltip="Coupon" color="accent" routerLink="coupons"><mat-icon>receipt</mat-icon></button>
+       </mat-list-item>
+       <mat-list-item>
+          <button mat-button matTooltip="Checkout" color="accent" routerLink="/checkout"><mat-icon>shopping_card</mat-icon></button>
+       </mat-list-item>
+       <mat-list-item>
+          <button mat-button matTooltip="Help" color="accent" routerLink="/help"><mat-icon>help</mat-icon></button>
+       </mat-list-item>
+    
+  </mat-list>
+    
   </mat-sidenav>
-  <button (click)="sidenav.toggle()">toggle</button>
+
+  <mat-toolbar>
+
+   <mat-toolbar-row>
+     <div class="filler">
+       <button mat-button matTooltip="Home" routerLink=""><mat-icon>home</mat-icon></button>
+       <button mat-button matTooltip="Coupon" routerLink="coupons"><mat-icon>receipt</mat-icon></button>
+       <button mat-button matTooltip="Checkout" routerLink="/checkout"><mat-icon>shopping_card</mat-icon></button>
+       <button mat-button matTooltip="Help" routerLink="/help"><mat-icon>help</mat-icon></button>
+     </div>
+   </mat-toolbar-row>
+    <mat-toolbar-row>
+      <button mat-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <div class="container">
+    <router-outlet> </router-outlet>
+  </div>
 </mat-sidenav-container>
